@@ -101,7 +101,7 @@ with gr.Blocks(fill_height=True) as demo:
     # Create new session_id
     session_id = str(uuid.uuid1())
 
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(scale=2)
     msg = gr.Textbox(
         label="⏎ for sending",
         placeholder="Ask me something",
