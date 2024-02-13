@@ -1,3 +1,5 @@
+import os
+
 from typing import Dict, Any, List, Tuple, Optional
 
 from llama_index.llama_pack.base import BaseLlamaPack
@@ -143,4 +145,7 @@ class GradioReActAgentPack(BaseLlamaPack):
 
 
 if __name__ == "__main__":
+    # Check that OPENAI_API_KEY is set
+    if "OPENAI_API_KEY" not in os.environ:
+        raise ValueError("Please set the OPENAI_API_KEY environment variable.")
     GradioReActAgentPack(run_from_main=True).run()
