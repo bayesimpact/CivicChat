@@ -1,4 +1,4 @@
-To run the app:
+To run the app, place the necessary context documents in the `documents` folder.
 
 ```
 poetry install
